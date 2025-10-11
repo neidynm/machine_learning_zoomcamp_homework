@@ -2,11 +2,11 @@
 
 A machine learning project to predict customer conversion rates using logistic regression, part of the ML Zoomcamp Week -3 curriculum.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project implements a lead scoring system to predict whether potential customers will convert based on their interaction patterns, demographics, and engagement metrics. Using logistic regression, we achieve a baseline accuracy of 70% and uncover interesting insights about feature importance.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Dataset](#dataset)
 - [Features](#features)
@@ -21,7 +21,7 @@ This project implements a lead scoring system to predict whether potential custo
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
-## 📊 Dataset
+## Dataset
 
 The project uses the Course Lead Scoring dataset from Alexey Grigorev's repository.
 
@@ -31,7 +31,7 @@ The project uses the Course Lead Scoring dataset from Alexey Grigorev's reposito
 
 **Target Variable**: `converted` (binary: 0 or 1)
 
-## 🔧 Features
+## Features
 
 ### Numerical Features
 - `number_of_courses_viewed` - Number of courses browsed by the lead
@@ -71,7 +71,7 @@ git clone https://github.com/yourusername/lead-scoring-logistic-regression.git
 cd lead-scoring-logistic-regression
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Quick Start
 
@@ -118,18 +118,16 @@ print(f"Will convert: {'Yes' if prediction == 1 else 'No'}")
 ## 📁 Project Structure
 
 ```
-lead-scoring-logistic-regression/
+week_3/
 │
-├── Homework Bank Churn (1).ipynb  # Main notebook with analysis
+├── Homework Bank Churn.ipynb  # Main notebook with analysis
 ├── README.md                       # Project documentation
 ├── requirements.txt                # Python dependencies
 ├── data/                          # Data directory (created on first run)
 │   └── course_lead_scoring.csv   # Downloaded dataset
-└── results/                       # Output directory for results (optional)
-    └── feature_importance.csv    # Feature importance analysis
 ```
 
-## 📈 Methodology
+## Methodology
 
 ### 1. Data Preparation
 - Handle missing values (NA for categorical, 0 for numerical)
@@ -154,7 +152,7 @@ lead-scoring-logistic-regression/
 ## 🔍 Key Findings
 
 ### 1. Feature Correlations
-- **Extremely weak correlations** between numerical features (max: 0.027)
+- **Weak correlations** between numerical features (max: 0.027)
 - Features are largely independent, no multicollinearity issues
 
 ### 2. Mutual Information Scores
@@ -165,7 +163,7 @@ industry            0.012
 location            0.002
 ```
 
-### 3. Feature Importance (Ablation Study)
+### 3. Feature Importance 
 - **Most Important**: `annual_income` (accuracy drops to 85.3% when removed)
 - **Least Important**: `industry` (0.0% difference when removed)
 - **Critical Features**: `number_of_courses_viewed` and `interaction_count`
@@ -196,34 +194,7 @@ location            0.002
 | number_of_courses_viewed | 55.63% | -14.33% |
 | interaction_count | 55.63% | -14.33% |
 
-## 🚀 Future Improvements
-
-1. **Feature Engineering**
-   - Create interaction terms between features
-   - Polynomial features for numerical variables
-   - Binning continuous variables
-
-2. **Advanced Models**
-   - Random Forest for non-linear relationships
-   - XGBoost for better performance
-   - Neural networks for complex patterns
-
-3. **Data Quality**
-   - Better handling of missing values (imputation strategies)
-   - Outlier detection and treatment
-   - Feature scaling/normalization
-
-4. **Evaluation Metrics**
-   - Add precision, recall, and F1-score
-   - ROC-AUC for better threshold selection
-   - Confusion matrix analysis
-
-5. **Production Ready**
-   - Create model pipeline with sklearn Pipeline
-   - Add cross-validation
-   - Implement model versioning
-
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -233,11 +204,11 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Alexey Grigorev** - For the excellent ML Zoomcamp course and dataset
 - **ML Zoomcamp Community** - For support and inspiration
